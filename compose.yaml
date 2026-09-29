@@ -1,0 +1,11 @@
+services:
+  clearpay:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      DEMO_MODE: "true"
+    volumes:
+      - clearpay-data:/data
+volumes:
+  clearpay-data:
